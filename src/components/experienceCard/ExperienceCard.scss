@@ -75,6 +75,12 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+
+}
+
+.experience-text-company a{
+  text-decoration: none;
+  color: $lightBackground1;
 }
 
 .experience-roundedimg {
@@ -95,7 +101,7 @@
   text-align: center;
   color: $textColor;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 20px;
   margin: 0px;
   padding-top: 1.5rem;
   line-height: normal;
@@ -113,7 +119,7 @@
 }
 
 .experience-text-desc {
-  text-align: center;
+  text-align: left;
 }
 
 .experience-text-details {
@@ -126,7 +132,7 @@
 @media (max-width: 1380px) {
   .experience-text-role {
     padding-top: 0.5rem;
-    font-size: 22px;
+    font-size: 17px;
   }
   .experience-text-company {
     font-size: 22px;
@@ -142,7 +148,7 @@
 
 @media (max-width: 768px) {
   .experience-text-role {
-    font-size: 22px;
+    font-size: 17px;
   }
   .experience-text-company {
     font-size: 22px;

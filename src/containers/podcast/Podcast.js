@@ -1,8 +1,9 @@
 import React, {useContext} from "react";
 import "./Podcast.scss";
-import {podcastSection} from "../../portfolio";
+import {podcastSection, splashScreen} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import stackOverFlowIcon from "../../animation_stackoverflow_small.gif";
 
 export default function Podcast() {
   const {isDark} = useContext(StyleContext);
@@ -17,7 +18,7 @@ export default function Podcast() {
     <Fade bottom duration={1000} distance="20px">
       <div className="main">
         <div className="podcast-header">
-          <h1 className="podcast-header-title">{podcastSection.title}</h1>
+          <h1 className="podcast-header-title">{podcastSection.title} <img src={stackOverFlowIcon} height="40px;" /> </h1>
           <p
             className={
               isDark
@@ -29,24 +30,12 @@ export default function Podcast() {
           </p>
         </div>
         <div className="podcast-main-div">
-          {podcastSection.podcast.map((podcastLink, i) => {
-            if (!podcastLink) {
-              console.log(
-                `Podcast link for ${podcastSection.title} is missing`
-              );
-            }
-            return (
-              <div key={i}>
-                <iframe
-                  className="podcast"
-                  src={podcastLink}
-                  frameBorder="0"
-                  scrolling="no"
-                  title="Podcast"
-                ></iframe>
-              </div>
-            );
-          })}
+          <a href="https://stackoverflow.com/users/1830063/tousif">
+            <img src="https://stackoverflow.com/users/flair/1830063.png?theme=default"
+                 width="208" height="58"
+                 alt="profile for Tousif at Stack Overflow, Q&amp;A for professional and enthusiast programmers"
+                 title="profile for Tousif at Stack Overflow, Q&amp;A for professional and enthusiast programmers" />
+            </a>
         </div>
       </div>
     </Fade>
