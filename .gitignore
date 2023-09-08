@@ -7,8 +7,8 @@
 
 # testing
 /coverage
-
-
+/build
+.idea
 # misc
 .DS_Store
 .env
