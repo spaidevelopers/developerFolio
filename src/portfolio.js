@@ -40,7 +40,7 @@ const socialMediaLinks = {
   // gitlab: "https://gitlab.com/saadpasta",
   // facebook: "https://www.facebook.com/saad.pasta7",
   // medium: "https://medium.com/@saadpasta",
-  stackoverflow: "1830063",
+  stackoverflow: "https://stackoverflow.com/users/1830063/tousif",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
