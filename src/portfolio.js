@@ -378,7 +378,7 @@ const blogSection = {
         "Relief your database and shift some load on memcache as it is faster (because data is coming from RAM instead of HDD) and your application will be available for more traffic"
     },
     {
-      url: "https://www.linkedin.com/in/tousifhasanzai/recent-activity/articles/",
+      url: "https://www.linkedin.com/today/author/tousifhasanzai",
       title: "Read More!",
       description:
           "Checkout all my articles on LinkedIn, I would love to hear your feedback."
