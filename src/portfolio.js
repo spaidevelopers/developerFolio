@@ -24,7 +24,9 @@ const greeting = {
   username: "Tousif K.",
   title: "Hi all, I'm Tousif",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with PHP / Python / Flutter / React and some other cool libraries and frameworks."
+    // "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with PHP / Python / Flutter / React and some other cool libraries and frameworks.",
+    //   "From Idea to Reality| Tousif Khan - Your Web & Mobile App Development Partner"
+  "Transform your business ideas into reality 🚀 your trusted partner for complete web and mobile app development services. From concept to deployment, I will bring your vision to life."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1febIs-U8qsl17zBVLQAiR_B64-H1u4qq/view?usp=sharing", // Set to empty to hide the button
@@ -50,12 +52,13 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "Crazy full stack developer who wants to explore every tech stack",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ Develop highly interactive Frontend and backend for your web and mobile applications"
     ),
     emoji("⚡ Flutter web application development"),
+    emoji("⚡ Advanced web scrapping using Python and selenium"),
     emoji(
       "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
     )
@@ -293,7 +296,7 @@ const achievementSection = {
       subtitle:
         "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
       image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
+      imageAlt: "Tousif's Google Code-In Finalist Certificate",
       footerLink: [
         // {
         //   name: "Certification",
@@ -314,7 +317,7 @@ const achievementSection = {
       subtitle:
         "Python for Data Sciences",
       image: require("./assets/images/Python_101_Data_Science.png"),
-      imageAlt: "Google Assistant Action Logo",
+      imageAlt: "Tousif's IBM Certification",
       footerLink: [
         {
           name: "Certification",
@@ -327,7 +330,7 @@ const achievementSection = {
       title: "Hacker Rank",
       subtitle: "In my spare time I like to solve problems on Hacker Rank",
       image: require("./assets/images/hacker-rank1.png"),
-      imageAlt: "PWA Logo",
+      imageAlt: "Tousif's Hacker Rank Certifications",
       footerLink: [
         {
           name: "Certification",
