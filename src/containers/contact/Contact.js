@@ -64,7 +64,13 @@ export default function Contact() {
             {/*  ></img>*/}
             {/*)}*/}
 
+            {/*uncomment this if you want to display typeform for contact*/}
             <Widget id="U6Oh4fCI" style={{ width: '100%', height: '100%' }} className="my-form" />
+
+            {/*embeded code for calendly widget*/}
+            {/*<div class="calendly-inline-widget" data-url="https://calendly.com/tousifkhan/product-planning-brainstorming" style="min-width:320px;height:700px;"></div>*/}
+            {/*<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>*/}
+
           </div>
         </div>
       </div>
