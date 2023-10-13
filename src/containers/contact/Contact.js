@@ -7,6 +7,7 @@ import email from "../../assets/lottie/email";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
 import { Widget } from '@typeform/embed-react'
+import TrustPilot from "../../components/trustPilot/TrustPilot";
 
 
 export default function Contact() {
@@ -53,10 +54,11 @@ export default function Contact() {
               <br />
               <SocialMedia />
             </div>
-            <div className="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc"
-                 data-businessunit-id="6527f2278860e2ce4e38998f" data-style-height="52px" data-style-width="100%">
-              <a href="https://www.trustpilot.com/review/tousif.me" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
+
+            <TrustPilot />
+            {/* More content */}
+          </div>
+
           </div>
           <div className="contact-image-div">
             {/*{illustration.animated ? (*/}
