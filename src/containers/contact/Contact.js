@@ -53,12 +53,8 @@ export default function Contact() {
               <br />
               <br />
               <SocialMedia />
+              <TrustPilot />
             </div>
-
-            <TrustPilot />
-            {/* More content */}
-          </div>
-
           </div>
           <div className="contact-image-div">
             {/*{illustration.animated ? (*/}
