@@ -43,6 +43,7 @@ const socialMediaLinks = {
   // facebook: "https://www.facebook.com/saad.pasta7",
   // medium: "https://medium.com/@saadpasta",
   stackoverflow: "https://stackoverflow.com/users/1830063/tousif",
+  fiverr: "https://www.fiverr.com/tousifkhan",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -412,7 +413,7 @@ const talkSection = {
 // Podcast Section
 
 const podcastSection = {
-  title: emoji("Stack Overflow"),
+  title: emoji("Credibility 🤝"),
   subtitle: "I LOVE TO SHARE PROGRAMMING KNOWLEDGE IN MY SPARE TIME, CHECKOUT MY RATINGS! 😅",
   //image: animationStackoverflow,
   display: true // Set false to hide this section, defaults to true
@@ -422,7 +423,7 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle: "Discuss a project or just want to say hi? My Inbox is open for all.",
   number: "+92-3103434345",
-  email_address: "tousifhasanzai@gmail.com",
+  email_address: "hello@tousif.me",
 };
 
 // Twitter Section

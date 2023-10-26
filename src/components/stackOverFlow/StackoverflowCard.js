@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./StackoverflowCard.scss";
+import {socialMediaLinks} from "../../portfolio";
 
 export default class StackoverflowCard extends React.Component {
     constructor(props) {
@@ -35,6 +36,11 @@ export default class StackoverflowCard extends React.Component {
         }
 
         return (
+            <a
+                href={socialMediaLinks.stackoverflow}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
             <div className='stackoverflow-profile'>
                 <div className="stackoverflow-icon"></div>
                 <img className='profile-photo' src={userData.profile_image} />
@@ -51,6 +57,11 @@ export default class StackoverflowCard extends React.Component {
                     <div className='profile-stats-badge-bronze'>{userData.badge_counts.bronze}</div>
                 </div>
             </div>
+            </a>
+
+
+
+
         );
     }
 }

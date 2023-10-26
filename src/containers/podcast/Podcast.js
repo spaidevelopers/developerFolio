@@ -5,6 +5,7 @@ import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 import stackOverFlowIcon from "../../animation_stackoverflow_small.gif";
 import StackoverflowCard from "../../components/stackOverFlow/StackoverflowCard";
+import FiverrSellerWidget from "../../components/fiverr/FiverrSellerWidget";
 
 export default function Podcast() {
   const {isDark} = useContext(StyleContext);
@@ -30,8 +31,10 @@ export default function Podcast() {
             {podcastSection.subtitle}
           </p>
         </div>
-
+      <div className="podcast-main-div">
         <StackoverflowCard />
+        {/*<FiverrSellerWidget />*/}
+      </div>
       </div>
     </Fade>
   );

@@ -19,7 +19,10 @@ import SplashScreen from "./splashScreen/SplashScreen";
 import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
+import {FloatingWhatsApp} from "react-floating-whatsapp";
 import "./Main.scss";
+
+
 
 const Main = () => {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
@@ -65,7 +68,9 @@ const Main = () => {
             <Podcast />
             <Profile />
             <Footer />
-            <ScrollToTopButton />
+            {/*<ScrollToTopButton />*/}
+            <FloatingWhatsApp phoneNumber = "923103434345" accountName="Tousif Khan"
+                              statusMessage="Typically replies within 10 minutes" darkMode />
           </>
         )}
       </StyleProvider>
