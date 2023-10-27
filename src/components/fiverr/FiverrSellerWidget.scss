@@ -1,0 +1,139 @@
+@import "../../_globalColor";
+
+.fiverr-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.fiverr-card:hover + .fiverr-card-border {
+  border-color: $educationCardBorder;
+  width: 100%;
+  -webkit-transition: width 0.6s ease-in-out;
+  -moz-transition: width 0.6s ease-in-out;
+  -o-transition: width 0.6s ease-in-out;
+  transition: width 0.6s ease-in-out;
+}
+
+.fiverr-card-border {
+  height: 30px;
+  width: 80%;
+  border-top: 2px solid $lightBorder1;
+  margin-bottom: 20px;
+  -webkit-transition: width 0.6s ease-in-out;
+  -moz-transition: width 0.6s ease-in-out;
+  -o-transition: width 0.6s ease-in-out;
+  transition: width 0.6s ease-in-out;
+}
+
+.fiverr-head {
+  display: flex;
+  flex-direction: row;
+}
+
+.fiverr-text-school {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 27px;
+}
+
+.fiverr-roundedimg {
+  object-fit: cover;
+  margin-right: 2rem;
+  width: 6rem;
+  height: 6rem;
+  box-shadow: 0 0.5rem 1rem $lightBoxShadowDarker;
+  border-radius: 50%;
+}
+
+.fiverr-card-right {
+  max-width: 70%;
+  margin-left: 10px;
+}
+
+.fiverr-card-left {
+  margin-bottom: 5px;
+}
+
+.fiverr-text-subHeader {
+  color: $textColor;
+  font-weight: 700;
+  font-size: 19px;
+  margin: 0px;
+  padding-top: 0.8rem;
+  line-height: normal;
+}
+
+.fiverr-text-duration {
+  color: $titleColor;
+  font-size: 19px;
+  margin: 0px;
+  padding-top: 0.5rem;
+}
+
+.fiverr-text-desc {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.fiverr-text-bullets > ul {
+  margin-top: 0.5rem;
+}
+
+/* Media Query */
+
+@media (max-width: 1380px) {
+  .fiverr-card {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .fiverr-card-right {
+    max-width: 90%;
+  }
+  .fiverr-card-border {
+    width: 90%;
+  }
+  .fiverr-text-subHeader {
+    padding-top: 0.5rem;
+    font-size: 16px;
+  }
+  .fiverr-text-school {
+    font-size: 20px;
+    height: 23px;
+  }
+  .fiverr-text-duration {
+    font-size: 16px;
+  }
+  .fiverr-roundedimg {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fiverr-card {
+    text-align: center;
+  }
+  .fiverr-card-right {
+    max-width: 100%;
+  }
+  .fiverr-card-border {
+    width: 100%;
+  }
+  .fiverr-roundedimg {
+    margin-top: 10px;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+  .fiverr-text-bullets > ul {
+    max-width: 80%;
+    margin: auto;
+  }
+}

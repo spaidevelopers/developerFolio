@@ -7,7 +7,6 @@ import email from "../../assets/lottie/email";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
 import { Widget } from '@typeform/embed-react'
-import TrustPilot from "../../components/trustPilot/TrustPilot";
 
 
 export default function Contact() {
@@ -53,7 +52,6 @@ export default function Contact() {
               <br />
               <br />
               <SocialMedia />
-              <TrustPilot />
             </div>
           </div>
           <div className="contact-image-div">

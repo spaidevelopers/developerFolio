@@ -163,6 +163,36 @@ const educationInfo = {
   ]
 };
 
+//credibility section
+const credibilityInfo = {
+  display: true, // Set false to hide this section, defaults to true
+  cred1:
+    {
+      name: "Stack Overflow",
+      subHeader: "Free time hobby!",
+      desc: "Not very active on stack overflow but sometimes I do help others in comments or directly",
+      descBullets: [
+        "Use Computer vision in the field of Agriculture",
+        "Use Computer vision in eCommerce Store Inventory Management",
+      ]
+    },
+  cred2:
+    {
+      name: "Fiverr",
+      subHeader: "Level 2 Seller on Fiverr",
+      duration: "Jan 2008 - Dec 2011",
+      desc: "Ranked top 1st in Alogrithms and logic designing.",
+      descBullets: [
+        "Maintain 4.9 ratings since 2015",
+        "Never delayed my project",
+        "Completed 70+ big projects",
+        "Worked on eCommerce, custom PHP, devOps and Scrapping related projects mostly",
+        "Never received any warning"
+
+      ]
+    }
+};
+
 // Your top 3 proficient stacks/tech experience
 
 const techStack = {
@@ -452,5 +482,6 @@ export {
   podcastSection,
   contactInfo,
   twitterDetails,
-  isHireable
+  isHireable,
+  credibilityInfo
 };

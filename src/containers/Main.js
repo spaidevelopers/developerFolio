@@ -21,6 +21,7 @@ import {StyleProvider} from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
 import {FloatingWhatsApp} from "react-floating-whatsapp";
 import "./Main.scss";
+import Credibility from "./credibility/Credibility";
 
 
 
@@ -66,6 +67,7 @@ const Main = () => {
             <Talks />
             <Twitter />
             <Podcast />
+            <Credibility />
             <Profile />
             <Footer />
             {/*<ScrollToTopButton />*/}

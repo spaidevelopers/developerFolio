@@ -1,0 +1,50 @@
+.credibility-heading {
+  font-size: 56px;
+  font-weight: 400;
+}
+
+.credibility-section {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 20px 0px;
+  margin: 0px auto;
+  margin-top: 2rem;
+}
+
+.credibility-section > * {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.credibility-card-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+@media (max-width: 1380px) {
+  .credibility-card-container {
+    padding-top: 0px;
+  }
+  .credibility-heading {
+    font-size: 40px;
+  }
+  .credibility-text-subtitle {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .credibility-card-container {
+    padding-top: 0px;
+  }
+  .credibility-heading {
+    font-size: 30px;
+    text-align: center;
+  }
+  .credibility-text-subtitle {
+    font-size: 16px;
+  }
+}

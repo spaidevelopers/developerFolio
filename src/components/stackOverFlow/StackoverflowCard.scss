@@ -1,5 +1,146 @@
 @import "../../_globalColor";
 
+@import "../../_globalColor";
+
+.stackoverflow-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.stackoverflow-card:hover + .stackoverflow-card-border {
+  border-color: $educationCardBorder;
+  width: 100%;
+  -webkit-transition: width 0.6s ease-in-out;
+  -moz-transition: width 0.6s ease-in-out;
+  -o-transition: width 0.6s ease-in-out;
+  transition: width 0.6s ease-in-out;
+}
+
+.stackoverflow-card-border {
+  height: 30px;
+  width: 80%;
+  border-top: 2px solid $lightBorder1;
+  margin-bottom: 20px;
+  -webkit-transition: width 0.6s ease-in-out;
+  -moz-transition: width 0.6s ease-in-out;
+  -o-transition: width 0.6s ease-in-out;
+  transition: width 0.6s ease-in-out;
+}
+
+.stackoverflow-head {
+  display: flex;
+  flex-direction: row;
+}
+
+.stackoverflow-text-school {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 27px;
+}
+
+.stackoverflow-roundedimg {
+  object-fit: cover;
+  margin-right: 2rem;
+  width: 6rem;
+  height: 6rem;
+  box-shadow: 0 0.5rem 1rem $lightBoxShadowDarker;
+  border-radius: 50%;
+}
+
+.stackoverflow-card-right {
+  max-width: 70%;
+  margin-left: 10px;
+}
+
+.stackoverflow-card-left {
+  margin-bottom: 5px;
+}
+
+.stackoverflow-text-subHeader {
+  color: $textColor;
+  font-weight: 700;
+  font-size: 19px;
+  margin: 0px;
+  padding-top: 0.8rem;
+  line-height: normal;
+}
+
+.stackoverflow-text-duration {
+  color: $titleColor;
+  font-size: 19px;
+  margin: 0px;
+  padding-top: 0.5rem;
+}
+
+.stackoverflow-text-desc {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.stackoverflow-text-bullets > ul {
+  margin-top: 0.5rem;
+}
+
+/* Media Query */
+
+@media (max-width: 1380px) {
+  .stackoverflow-card {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .stackoverflow-card-right {
+    max-width: 90%;
+  }
+  .stackoverflow-card-border {
+    width: 90%;
+  }
+  .stackoverflow-text-subHeader {
+    padding-top: 0.5rem;
+    font-size: 16px;
+  }
+  .stackoverflow-text-school {
+    font-size: 20px;
+    height: 23px;
+  }
+  .stackoverflow-text-duration {
+    font-size: 16px;
+  }
+  .stackoverflow-roundedimg {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stackoverflow-card {
+    text-align: center;
+  }
+  .stackoverflow-card-right {
+    max-width: 100%;
+  }
+  .stackoverflow-card-border {
+    width: 100%;
+  }
+  .stackoverflow-roundedimg {
+    margin-top: 10px;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+  .stackoverflow-text-bullets > ul {
+    max-width: 80%;
+    margin: auto;
+  }
+}
+
+
 .stackoverflow-profile-loading {
   width: 320px; height: 130px;
   position: relative;
@@ -36,6 +177,9 @@
     opacity: 0.2;
   }
 
+  a {
+    text-decoration: none;
+  }
   img {
     width: 100px; height: 100px;
     position: absolute;
