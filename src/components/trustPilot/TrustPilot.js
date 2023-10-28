@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, {useContext, useEffect} from 'react';
 import {Fade, Slide} from "react-reveal";
 import {credibilityInfo, socialMediaLinks} from "../../portfolio";
 import "./TrustPilot.scss";
+import StyleContext from "../../contexts/StyleContext";
 
 const TrustpilotWidget = () => {
     useEffect(() => {
@@ -19,6 +20,8 @@ const TrustpilotWidget = () => {
             document.head.removeChild(script);
         };
     }, []);
+
+    const {isDark} = useContext(StyleContext);
 
     return (
         <div>
@@ -47,9 +50,9 @@ const TrustpilotWidget = () => {
                         <div className="trustpilot-text-details">
                             <h5
                                 className={
-                                    // isDark
-                                    //     ? "dark-mode education-text-subHeader"
-                                    //     :
+                                     isDark
+                                         ? "dark-mode education-text-subHeader"
+                                         :
                                     "trustpilot-text-subHeader"
                                 }
                             >

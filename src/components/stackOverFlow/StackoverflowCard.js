@@ -84,14 +84,7 @@ export default class StackoverflowCard extends React.Component {
                             <h5 className="stackoverflow-text-school">{credibilityInfo.cred1.name}</h5>
 
                             <div className="stackoverflow-text-details">
-                                <h5
-                                    className={
-                                        // isDark
-                                        //     ? "dark-mode education-text-subHeader"
-                                        //     :
-                                            "stackoverflow-text-subHeader"
-                                    }
-                                >
+                                <h5>
                                     {credibilityInfo.cred1.subHeader}
                                 </h5>
                                 <p className="stackoverflow-text-desc">{credibilityInfo.cred1.desc}</p>
