@@ -42,6 +42,7 @@ const FiverrSellerWidget = () => {
         <Fade left duration={1000}>
             <div className="fiverr-card">
                     <div className="fiverr-card-left">
+
                         <div itemScope itemType="http://schema.org/Person" className="fiverr-seller-widget"
                              style={{display: 'inline-block'}}>
                             <a itemProp="url" href="https://www.fiverr.com/tousifkhan" rel="nofollow" target="_blank"

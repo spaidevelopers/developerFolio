@@ -33,14 +33,14 @@ export default function Contact() {
             >
               {contactInfo.number && (
                 <>
-                  <a
-                    className="contact-detail"
-                    href={"tel:" + contactInfo.number}
-                  >
-                    {contactInfo.number}
-                  </a>
-                  <br />
-                  <br />
+                  {/*<a*/}
+                  {/*  className="contact-detail"*/}
+                  {/*  href={"tel:" + contactInfo.number}*/}
+                  {/*>*/}
+                  {/*  {contactInfo.number}*/}
+                  {/*</a>*/}
+                  {/*<br />*/}
+                  {/*<br />*/}
                 </>
               )}
               <a

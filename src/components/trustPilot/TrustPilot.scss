@@ -1,0 +1,275 @@
+@import "../../_globalColor";
+
+@import "../../_globalColor";
+
+.trustpilot-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.trustpilot-widget{
+  top: 50%;
+}
+.trustpilot-card:hover + .trustpilot-card-border {
+  border-color: $educationCardBorder;
+  width: 100%;
+  -webkit-transition: width 0.6s ease-in-out;
+  -moz-transition: width 0.6s ease-in-out;
+  -o-transition: width 0.6s ease-in-out;
+  transition: width 0.6s ease-in-out;
+}
+
+.trustpilot-card-border {
+  height: 30px;
+  width: 80%;
+  border-top: 2px solid $lightBorder1;
+  margin-bottom: 20px;
+  -webkit-transition: width 0.6s ease-in-out;
+  -moz-transition: width 0.6s ease-in-out;
+  -o-transition: width 0.6s ease-in-out;
+  transition: width 0.6s ease-in-out;
+}
+
+.trustpilot-head {
+  display: flex;
+  flex-direction: row;
+}
+
+.trustpilot-text-school {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 27px;
+}
+
+.trustpilot-roundedimg {
+  object-fit: cover;
+  margin-right: 2rem;
+  width: 6rem;
+  height: 6rem;
+  box-shadow: 0 0.5rem 1rem $lightBoxShadowDarker;
+  border-radius: 50%;
+}
+
+.trustpilot-card-right {
+  max-width: 70%;
+  margin-left: 10px;
+}
+
+.trustpilot-card-left {
+  margin-bottom: 5px;
+}
+
+.trustpilot-text-subHeader {
+  color: $textColor;
+  font-weight: 700;
+  font-size: 19px;
+  margin: 0px;
+  padding-top: 0.8rem;
+  line-height: normal;
+}
+
+.trustpilot-text-duration {
+  color: $titleColor;
+  font-size: 19px;
+  margin: 0px;
+  padding-top: 0.5rem;
+}
+
+.trustpilot-text-desc {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.trustpilot-text-bullets > ul {
+  margin-top: 0.5rem;
+}
+
+/* Media Query */
+
+@media (max-width: 1380px) {
+  .trustpilot-card {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .trustpilot-card-right {
+    max-width: 90%;
+  }
+  .trustpilot-card-border {
+    width: 90%;
+  }
+  .trustpilot-text-subHeader {
+    padding-top: 0.5rem;
+    font-size: 16px;
+  }
+  .trustpilot-text-school {
+    font-size: 20px;
+    height: 23px;
+  }
+  .trustpilot-text-duration {
+    font-size: 16px;
+  }
+  .trustpilot-roundedimg {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trustpilot-card {
+    text-align: center;
+  }
+  .trustpilot-card-right {
+    max-width: 100%;
+  }
+  .trustpilot-card-border {
+    width: 100%;
+  }
+  .trustpilot-roundedimg {
+    margin-top: 10px;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+  .trustpilot-text-bullets > ul {
+    max-width: 80%;
+    margin: auto;
+  }
+}
+
+
+.trustpilot-profile-loading {
+  width: 260px; height: 70px;
+  position: relative;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF;
+
+  span {
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+  }
+}
+
+.trustpilot-profile {
+  background: #ecf0f1;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  width: 260px; height: 70px;
+  position: relative;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+
+  .trustpilot-icon {
+    background: url(http://sstatic.net/stackexchange/img/logos/so/so-icon.png) no-repeat;
+    width: 60px; height: 60px;
+    background-size: contain;
+    position: absolute;
+    top: 0; right: 0;
+    display: block;
+    opacity: 0.2;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  img {
+    width: 100px; height: 100px;
+    position: absolute;
+    top: 15px; left: 15px;
+    border: 1px solid #fafafa;
+  }
+
+  .top {
+    flex-basis: 75px;
+    background: #ecf0f1;
+    padding-left: 130px;
+    padding-top: 15px;
+
+    div {
+      margin-bottom: 3px;
+    }
+
+    .profile-name {
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .profile-location {
+      opacity: 0.5;
+      color: #2c3e50;
+      font-size: 0.9em;
+    }
+
+    .profile-stats-repo {
+      font-size: 22px;
+      color: #27ae60;
+
+      &::after {
+        content: "REP";
+        font-size: 16px;
+        color: #bdc3c7;
+        opacity: 0.5;
+        padding-left: 1px;
+      }
+    }
+  }
+
+  .bottom {
+    flex: 1;
+    padding-left: 130px;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    padding-top: 7px;
+
+    .profile-stats-badge-gold {
+      flex-grow: 1;
+      color: #f39c12;
+
+      &::after {
+        content: "GOLD";
+        font-size: 8px;
+        color: #f39c12;
+        opacity: 0.8;
+        padding-left: 1px;
+      }
+    }
+
+    .profile-stats-badge-silver {
+      flex-grow: 1;
+      color: #95a5a6;
+
+      &::after {
+        content: "SILVER";
+        font-size: 8px;
+        color: #95a5a6;
+        opacity: 0.8;
+        padding-left: 1px;
+      }
+    }
+
+    .profile-stats-badge-bronze {
+      flex-grow: 1;
+      color: #d35400;
+
+      &::after {
+        content: "BRONZE";
+        font-size: 8px;
+        color: #d35400;
+        opacity: 0.8;
+        padding-left: 1px;
+      }
+    }
+  }
+}

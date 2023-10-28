@@ -190,7 +190,21 @@ const credibilityInfo = {
         "Never received any warning"
 
       ]
-    }
+    },
+  cred3:
+      {
+        name: "Trust Pilot",
+        subHeader: "Rising Star on Trust Pilot",
+        desc: "Ranked top 1st in Alogrithms and logic designing.",
+        descBullets: [
+          "Maintain 4.9 ratings since 2015",
+          "Never delayed my project",
+          "Completed 70+ big projects",
+          "Worked on eCommerce, custom PHP, devOps and Scrapping related projects mostly",
+          "Never received any warning"
+
+        ]
+      }
 };
 
 // Your top 3 proficient stacks/tech experience
@@ -443,10 +457,14 @@ const talkSection = {
 // Podcast Section
 
 const podcastSection = {
-  title: emoji("Credibility 🤝"),
-  subtitle: "I LOVE TO SHARE PROGRAMMING KNOWLEDGE IN MY SPARE TIME, CHECKOUT MY RATINGS! 😅",
-  //image: animationStackoverflow,
-  display: true // Set false to hide this section, defaults to true
+  title: emoji("Podcast 🎙️"),
+  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
+
+  // Please Provide with Your Podcast embeded Link
+  podcast: [
+    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
+  ],
+  display: false // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {

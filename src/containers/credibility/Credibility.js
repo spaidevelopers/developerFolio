@@ -4,6 +4,8 @@ import {credibilityInfo} from "../../portfolio";
 import StackoverflowCard from "../../components/stackOverFlow/StackoverflowCard";
 import FiverrSellerWidget from "../../components/fiverr/FiverrSellerWidget";
 import TrustPilot from "../../components/trustPilot/TrustPilot";
+import TrustpilotWidget from "../../components/trustPilot/TrustPilot";
+import TrustpilotReviewCollector from "../../components/trustPilot/TrustPilot";
 
 export default function Credibility() {
   if (credibilityInfo.display) {
@@ -12,9 +14,11 @@ export default function Credibility() {
         <h1 className="credibility-heading">Credibility</h1>
         <div className="credibility-card-container">
 
+
             <FiverrSellerWidget />
+            <TrustpilotReviewCollector />
             <StackoverflowCard />
-            <TrustPilot />
+
         </div>
       </div>
     );
