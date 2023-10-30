@@ -71,8 +71,8 @@ const Main = () => {
             <Profile />
             <Footer />
             {/*<ScrollToTopButton />*/}
-            <FloatingWhatsApp phoneNumber = "923103434345" accountName="Tousif Khan"
-                              statusMessage="Typically replies within 10 minutes" darkMode />
+            {/*<FloatingWhatsApp phoneNumber = "923103434345" accountName="Tousif Khan"*/}
+            {/*                  statusMessage="Typically replies within 10 minutes" darkMode />*/}
           </>
         )}
       </StyleProvider>
