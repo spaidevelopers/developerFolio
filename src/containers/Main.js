@@ -34,7 +34,16 @@ const Main = () => {
   useEffect(() => {
     if (splashScreen.enabled) {
       const splashTimer = setTimeout(
-        () => setIsShowingSplashAnimation(false),
+        () => {
+          setIsShowingSplashAnimation(false)
+          const hash = window.location.hash;
+          if (hash) {
+            const targetElement = document.querySelector(hash);
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        },
         splashScreen.duration
       );
       return () => {
@@ -64,7 +73,7 @@ const Main = () => {
             <StartupProject />
             <Achievement />
             <Credibility />
-            <Blogs />
+            {/* <Blogs /> */}
             <Talks />
             <Twitter />
             <Podcast />

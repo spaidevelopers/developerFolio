@@ -4,95 +4,82 @@ import BlogCard from "../../components/blogCard/BlogCard";
 import {blogSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import { useSearchParams } from "react-router-dom";
+
 export default function Blogs() {
   const {isDark} = useContext(StyleContext);
-  const [mediumBlogs, setMediumBlogs] = useState([]);
-  function setMediumBlogsFunction(array) {
-    setMediumBlogs(array);
-  }
-  //Medium API returns blogs' content in HTML format. Below function extracts blogs' text content within paragraph tags
-  function extractTextContent(html) {
-    return typeof html === "string"
-      ? html
-          .split("p>")
-          .filter(el => !el.includes(">"))
-          .map(el => el.replace("</", ".").replace("<", ""))
-          .join(" ")
-      : NaN;
-  }
-  useEffect(() => {
-    if (blogSection.displayMediumBlogs === "true") {
-      const getProfileData = () => {
-        fetch("/blogs.json")
-          .then(result => {
-            if (result.ok) {
-              return result.json();
-            }
-          })
-          .then(response => {
-            setMediumBlogsFunction(response.items);
-          })
-          .catch(function (error) {
-            console.error(
-              `${error} (because of this error Blogs section could not be displayed. Blogs section has reverted to default)`
-            );
-            setMediumBlogsFunction("Error");
-            blogSection.displayMediumBlogs = "false";
-          });
-      };
-      getProfileData();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [currentPage, setCurrentPage] = useState(searchParams.get('page') ?? 1);
+  const pageLength = 8;
+  const totalPages = Math.ceil((blogSection.blogs.length) / pageLength);
+
+  useEffect(()=>{
+    if(currentPage>totalPages){
+      setCurrentPage(totalPages);
     }
-  }, []);
+    if(currentPage<1){
+      setCurrentPage(1);
+    }
+  },[currentPage, totalPages])
+
+  const renderPageNumbers = () => {
+    const pageNumbers = [];
+    for (let i = 1; i <= totalPages; i++) {
+      pageNumbers.push(
+        <div
+          key={i}
+          className={`pagination-number ${!isDark && currentPage.toString() === i.toString() ? 'small-dark':''} ${currentPage.toString() === i.toString() ? 'active' : ''}`}
+          onClick={() => {
+            setCurrentPage(i);
+            setSearchParams({
+              page: i
+            },{replace: true});
+          }}>{i}</div>
+      );
+    }
+    return pageNumbers;
+  };
+
+  const indexOfLastBlog = currentPage * pageLength;
+  const indexOfFirstBlog = indexOfLastBlog - pageLength;
+  const currentBlogs = blogSection.blogs.slice(indexOfFirstBlog, indexOfLastBlog);
+
   if (!blogSection.display) {
     return null;
   }
+
   return (
-    <Fade bottom duration={1000} distance="20px">
-      <div className="main" id="blogs">
+      <div className="main" style={{ marginTop: 0 }} id="blogs">
         <div className="blog-header">
           <h1 className="blog-header-text">{blogSection.title}</h1>
-          <p
-            className={
-              isDark ? "dark-mode blog-subtitle" : "subTitle blog-subtitle"
-            }
-          >
+          <p className={ isDark ? "dark-mode blog-subtitle" : "subTitle blog-subtitle" }>
             {blogSection.subtitle}
           </p>
         </div>
+        <Fade duration={2000} distance="20px" key={"BlogsContainer"+currentPage.toString()}>
         <div className="blog-main-div">
           <div className="blog-text-div">
-            {blogSection.displayMediumBlogs !== "true" ||
-            mediumBlogs === "Error"
-              ? blogSection.blogs.map((blog, i) => {
-                  return (
-                    <BlogCard
-                      key={i}
-                      isDark={isDark}
-                      blog={{
-                        url: blog.url,
-                        image: blog.image,
-                        title: blog.title,
-                        description: blog.description
-                      }}
-                    />
-                  );
-                })
-              : mediumBlogs.map((blog, i) => {
-                  return (
-                    <BlogCard
-                      key={i}
-                      isDark={isDark}
-                      blog={{
-                        url: blog.link,
-                        title: blog.title,
-                        description: extractTextContent(blog.content)
-                      }}
-                    />
-                  );
-                })}
+            {currentBlogs.map((blog, i) => {
+              return (
+                <BlogCard
+                  key={i}
+                  isDark={isDark}
+                  blog={{
+                    key: blog.key,
+                    url: blog.url,
+                    image: blog.image,
+                    title: blog.title,
+                    description: blog.description
+                  }}
+                />
+              );
+            })}
           </div>
         </div>
+        </Fade>
+        <div className="blogs-pagination">
+          {renderPageNumbers()}
+        </div>
       </div>
-    </Fade>
   );
 }

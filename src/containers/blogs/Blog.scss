@@ -22,6 +22,28 @@
   font-weight: 400;
 }
 
+.blogs-pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-number {
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.pagination-number.active {
+  background-color: $buttonColor;
+}
+
 .blog-subtitle {
   text-transform: uppercase;
 }
@@ -31,7 +53,13 @@
 }
 .blog-main-div {
   display: flex;
+  margin-top: 30px;
 }
+.blog-image-div {
+  display: flex;
+  justify-content: center;
+}
+
 .blog-image-div > img {
   max-width: 100%;
   height: auto;
