@@ -6,11 +6,11 @@ import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 import { useSearchParams } from "react-router-dom";
 
-export default function Blogs() {
+export default function Blogs(pageParams) {
   const {isDark} = useContext(StyleContext);
   const [searchParams, setSearchParams] = useSearchParams();
   const [currentPage, setCurrentPage] = useState(searchParams.get('page') ?? 1);
-  const pageLength = 8;
+  const pageLength = 6;
   const totalPages = Math.ceil((blogSection.blogs.length) / pageLength);
 
   useEffect(()=>{
@@ -40,8 +40,8 @@ export default function Blogs() {
     return pageNumbers;
   };
 
-  const indexOfLastBlog = currentPage * pageLength;
-  const indexOfFirstBlog = indexOfLastBlog - pageLength;
+  const indexOfLastBlog = pageParams?.withoutPagination ? pageLength - 1 :  currentPage * pageLength;
+  const indexOfFirstBlog = pageParams?.withoutPagination ? 0 : indexOfLastBlog - pageLength;
   const currentBlogs = blogSection.blogs.slice(indexOfFirstBlog, indexOfLastBlog);
 
   if (!blogSection.display) {
@@ -74,12 +74,22 @@ export default function Blogs() {
                 />
               );
             })}
+            { pageParams?.withoutPagination && 
+            <BlogCard
+              isDark={isDark}
+              blog={{
+                title: "Read More!",
+                description: "Checkout all my articles, I would love to hear your feedback."
+              }}
+            /> }
           </div>
         </div>
         </Fade>
-        <div className="blogs-pagination">
-          {renderPageNumbers()}
-        </div>
+        { !pageParams?.withoutPagination &&
+          <div className="blogs-pagination">
+            {renderPageNumbers()}
+          </div>
+        }
       </div>
   );
 }

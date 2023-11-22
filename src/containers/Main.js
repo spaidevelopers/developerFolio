@@ -73,7 +73,7 @@ const Main = () => {
             <StartupProject />
             <Achievement />
             <Credibility />
-            {/* <Blogs /> */}
+            <Blogs withoutPagination={true} />
             <Talks />
             <Twitter />
             <Podcast />
