@@ -19,7 +19,7 @@ import SplashScreen from "./splashScreen/SplashScreen";
 import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
-import {FloatingWhatsApp} from "react-floating-whatsapp";
+//import {FloatingWhatsApp} from "react-floating-whatsapp";
 import "./Main.scss";
 import Credibility from "./credibility/Credibility";
 
