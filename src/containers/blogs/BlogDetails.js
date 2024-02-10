@@ -14,14 +14,21 @@ export default function BlogDetails() {
       const targetBlog = blogSection.blogs.find(blog => blog.key === params.blogKey);
       if (targetBlog) {
         setBlogData(targetBlog);
+        document.title = targetBlog.title; // Set the title tag
+        setMetaDescription(targetBlog.description); // Set the meta description tag
+
       } else {
         navigation('/blogs', { replace: true });
       }
     }
   }, [navigation, params]);
 
+    const setMetaDescription = (desc) => {
+        document.querySelector('meta[name="description"]').setAttribute("content", desc);
+    };
+
   return (
-      <div className="main" style={{ marginTop: 0 }} id="blogs">
+      <div className="main blog-post" style={{ marginTop: 0 }} id="blogs">
         <div className="blog-image-div">
           <img alt={blogData.heading} src={blogData.image} />
         </div>

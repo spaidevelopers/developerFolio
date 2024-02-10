@@ -396,11 +396,83 @@ const blogSection = {
   displayMediumBlogs: "false", // Set true to display fetched medium blogs instead of hardcoded ones
   blogs: [
     {
+      key: "Minimize-Website-Loadtime",
+      image: require("./assets/images/website-speed.jpg"),
+      url: "https://medium.com/@tousifhasanzai/j2pay-f9c9c379b125",
+      title: "Some Cool features of Laravel 8",
+      description:
+          "Laravel 8 introduces enhanced maintenance mode, a flexible rate limiter, and Laravel Octane for improved performance with Swoole server. It also features job batching, Laravel Jetstream for project scaffolding, migration squashing, and improved route caching.",
+      heading: "Steps to minimize website load time",
+      data: `
+        <p>Think slow response time of your website doesn’t matter? Think again.</p>
+        <p>A 1-second delay in page load time yields:</p>
+        <ul>
+            <li>11% fewer page views</li>
+            <li>16% decrease in customer satisfaction</li>
+            <li>7% loss in conversions (source: Aberdeen Group)</li>
+        </ul>
+
+        <h2>Minimize HTTP Requests</h2>
+        <p>For your production site, it is better to combine all your CSS files into one. This minimizes multiple HTTP requests into a single one, thereby reducing load time.</p>
+
+        <h2>Minify/Compress CSS and JavaScripts</h2>
+        <p>Use online tools to minify and compress CSS and JavaScript scripts. This can decrease the size of files by 70% to 80%, boosting your website's performance.</p>
+
+        <h2>Move JavaScript to the Footer</h2>
+        <p>Moving JavaScript to the footer ensures that your page loads first, followed by the script rendering, potentially decreasing your website's bounce rate.</p>
+
+        <h2>Enable Browser Caching</h2>
+        <p>Browser caching stores elements of a webpage on the user's hard drive, reducing the need for repeated HTTP requests and speeding up page loads on subsequent visits.</p>
+
+        <h2>Optimize Images</h2>
+        <p>Optimizing images is crucial. Compress and crop images before uploading to reduce load times and enhance user experience.</p>
+
+        <h2>Avoid Inline CSS</h2>
+        <p>Avoiding inline CSS can reduce the chances of code duplication and make your codebase cleaner.</p>
+
+        <h2>Add LazyLoad to Your Images</h2>
+        <p>LazyLoad allows images to load only as they come into the viewer's browser window, speeding up initial page loads and saving bandwidth.</p>
+
+        <p>These common issues can significantly impact page load time. For further optimization, consider reading my post on Database Query Optimization.</p>
+
+        <h2>Use Memcache</h2>
+        <p>Memcache is an effective strategy to avoid direct database calls, aiming to retrieve data from RAM first, reducing load times significantly.</p>`
+    },
+    {
       key: "J2Pay",
       url: "https://medium.com/@tousifhasanzai/j2pay-f9c9c379b125",
       title: "J2Pay",
       description:
-        "A fantastic library for Java developers to integrate with multiple merchants hassle-free. Authored by me, a developer, and created with love for developers."
+        "A fantastic library for Java developers to integrate with multiple merchants hassle-free. Authored by me, a developer, and created with love for developers.",
+    data: `<h1>J2Pay: Simplifying Multi-Gateway Payment Processing in Java</h1>
+        <p>J2Pay is an open source multi-gateway payment processing library for Java. It provides a simple and generic API for many gateways, reducing the effort required by developers to write individual code for each gateway or merchant. The flexibility to write code once for all gateways is a key feature, along with the exclusion of efforts in reading documentation for each individual gateway. Currently, J2Pay supports 9 merchants, but it allows easy addition of more.</p>
+
+        <h2>Why Use J2Pay?</h2>
+        <ul>
+            <li>Multi-gateway support in your application.</li>
+            <li>Avoid the time-consuming process of learning individual payment gateways' documentation, which can often be poorly documented.</li>
+            <li>Support multiple payment gateways without worrying about the implementation of each.</li>
+            <li>Use a single API for all gateways.</li>
+            <li>No need to write separate logic for each gateway.</li>
+            <li>Generic Request/Response handling.</li>
+        </ul>
+        
+        <p>One of the main problems developers face when working with multiple gateways are the varying API parameter names. For example:</p>
+        <ul>
+            <li>Some gateways might refer to the first name as 'fname', 'first_name', etc.</li>
+            <li>Card number might be referred to as 'CardNumber', 'Card_Number', or 'card'.</li>
+        </ul>
+        <p>J2Pay eliminates these inconsistencies and provides classes for customer details and customer cards that remain the same across all gateways.</p>
+
+        <p>Similarly, parsing gateway responses can be problematic. Different gateways might return a transaction ID as:</p>
+        <ul>
+            <li>'transaction_id'</li>
+            <li>'transId'</li>
+            <li>'trans_tag', and so on.</li>
+        </ul>
+        <p>However, with J2Pay, you will consistently receive 'transactionId'.</p>
+
+        <p>For more information, you can view the <a href="https://github.com/tranxactive/J2PAY">official J2Pay documentation and contributors' guide on GitHub</a>.</p>`
     },
     {
       key: "MySQL-Optimization",
@@ -408,47 +480,120 @@ const blogSection = {
       title: "MySQL Optimization",
       description: "A fantastic library for Java developers to integrate with multiple merchants hassle-free. Authored by me, a developer, and created with love for developers.",
       heading: "22 QUICK STEPS FOR MYSQL OPTIMIZATION",
-      data: `<div><p>MySQL and MariaDB are popular choices for database management systems, now a days database sizes reaches to GB, TB or even to PB. Most of the time people use to upgrade their hardware once their web application takes longer time to load although it resolve the issue for the time due to high specifications of hardware but this is not a permanent solution if your query or schema structure is not good you will again face same issue after a while</p><p>Slow response could be possible due to 3 reasons</p><ol>
-        <li>Hardware configuration of the server</li>
-        <li>Network setup of the server</li>
-        <li>Your query (source code) or schema design </li>
-        </ol><p>Here we will see try to resolve the last reason which is most common</p><p><strong>Note: I will not recommend you to perform these steps on live database, it’s better to perform all these steps on backup database once you are done then make it live</strong></p><ul>
-        <li>Make sure table column has right data types</li>
-        </ul><blockquote>For example<br>i. If there are a limited number of valid entries for a specific field that takes string values, you could use the "enum" type instead of "varchar"<br>ii. Use INT instead of BIGINT if your table size is not huge</blockquote><ul>
-        <li>Try to use column size efficiently for example column "NAME" VARCHAR (100) is more than enough instead of VARCHAR (255)</li>
-        <li>Use TIMESTAMP instead of DATETIME as TIMESTAMP consume 4 bytes, DATETIME consume 8 bytes</li>
-        <li>Never ever use “SELECT * FROM table” instead of that just fetch your required columns</li>
-        <li>Use less column in a busy tables (you may breakdown the large table in to small)</li>
-        <li>Use indexes properly, you may slow down your insertion or updation if you used unnecessary indexing</li>
-        <li>Join work perfectly on same size and type like VARCHAR (10) with VARCHAR (10) not VARCHAR (15), or INT (11) with INT (11).</li>
-        </ul><blockquote>For example<br>i. SELECT * FROM t1 JOIN t2 on t1.x=t2.x (where column x from t1 and column x from t2 both should be same data type and size)</blockquote><ul>
-        <li>For comparison of string both columns should use same character set like utf8 with utf8</li>
-        <li>Do not mix ASC and DESC</li>
-        <li>The key used to fetch row must be same as the one in order by</li>
-        </ul><blockquote>For example<br>i. SELECT * FROM t1 where key2=constant order by key2 (ok)<br>ii. SELECT * FROM t2 where key1=constant order by key2 (not good)</blockquote><ul>
-        <li>Don’t use ORDER BY with term instead of value</li>
-        </ul><blockquote>For example<br>i. SELECT * FROM t1 order by ABS(key) (not good)</blockquote><ul>
-        <li>Order and group must be same</li>
-        <li>use like “string%” or “%string” if possible instead of “%string%”</li>
-        <li>“SELECT * FROM table” and “select * from table” both treat as different when using caching so stick with 1st one</li>
-        <li>use memory table for storing session as it is very fast</li>
-        <li>If you need to calculate COUNT or SUM based on information from a lot of rows, it makes sense to create a separate table and update the counter in real time, which is much faster. Take advantage of using a summary table instead of scanning the entire log table every time.</li>
-        <li>increase buffers size if required</li>
-        <li>Consider avoiding using of HAVING clause it’s rather slow.</li>
-        <li>Use OPTIMIZE TABLE table_name to recreate indexing and reclaim extra spacing.</li>
-        <li>You should analyze your queries to ensure that they are using indexes whenever possible by using EXPLAIN keyword</li>
-        </ul><blockquote>For example <br>i. EXPLAIN table_name</blockquote><ul>
-        <li>To achieve high performance it is necessary to choose storage Engine according to your requirements</li>
-        </ul><blockquote>Most common storage engines are MyISAM or InnoDB</blockquote><blockquote>The main difference between them is</blockquote><blockquote>MyISAM offers table-level locking, meaning that when data is being written to the table the whole table is locked, and if there are other writes that must be performed at the same time on the same table, they will have to wait until the first one has finished writing data</blockquote><blockquote>InnoDB, on the other hand, offers row-level locking, meaning that when data is being written to a row, only that particular row is locked; the rest of the table is available for writing.</blockquote><blockquote>You can create a relations in InnoDB while MyISAM has a lack of relations feature</blockquote><blockquote>InnoDB uses more system resources than MyISAM, so MyISAM is faster</blockquote><ul>
-        <li>use “limit” in query while fetching data where possible (less memory will consume and we will get more space also process will be fast)</li>
-        </ul><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p></div>`
+      data: `<h1>Optimizing MySQL and MariaDB for Large Databases: Best Practices</h1>
+        <p>In the world of database management, MySQL and MariaDB stand out as popular choices. However, as databases grow into sizes of gigabytes, terabytes, or even petabytes, simply upgrading hardware to improve performance becomes a short-term fix. A more sustainable solution lies in optimizing your queries and schema design.</p>
+
+        <h2>Slow Response Could Be Due To:</h2>
+        <ul>
+            <li>Hardware configuration of the server.</li>
+            <li>Network setup of the server.</li>
+            <li>Your query (source code) or schema design.</li>
+        </ul>
+
+        <p>Here we will focus on the last reason, which is the most common cause of performance issues.</p>
+
+        <p><strong>Note:</strong> It is recommended to perform these optimizations on a backup database before applying them to a live environment.</p>
+
+        <h2>1. Right Data Types for Table Columns:</h2>
+        <ul>
+            <li>Use <code>enum</code> instead of <code>varchar</code> for fields with limited valid string entries.</li>
+            <li>Opt for <code>INT</code> over <code>BIGINT</code> if your table size is not huge.</li>
+            <li>Limit <code>VARCHAR</code> sizes appropriately, e.g., <code>VARCHAR(100)</code> instead of <code>VARCHAR(255)</code>.</li>
+            <li>Prefer <code>TIMESTAMP</code> over <code>DATETIME</code> as it consumes less space.</li>
+        </ul>
+
+        <h2>2. Efficient Data Retrieval:</h2>
+        <p>Avoid using <code>SELECT * FROM table</code>. Fetch only the necessary columns. Minimize the number of columns in busy tables, possibly by breaking down a large table into smaller ones.</p>
+
+        <h2>3. Proper Use of Indexes:</h2>
+        <p>Apply indexes judiciously to avoid slowing down insertions or updates. Ensure that joins involve columns of the same size and type.</p>
+        <code>SELECT * FROM t1 JOIN t2 ON t1.x = t2.x</code>
+
+        <h2>4. Query Design Best Practices:</h2>
+        <p>Avoid mixing <code>ASC</code> and <code>DESC</code> in queries. Match the key used in the <code>WHERE</code> clause with the one in the <code>ORDER BY</code> clause.</p>
+        <code>SELECT * FROM t1 WHERE key2 = constant ORDER BY key2</code>
+
+        <h2>5. Additional Performance Tips:</h2>
+        <ul>
+            <li>Use <code>LIKE 'string%'</code> or <code>'%string'</code> instead of <code>'%string%'</code> for better performance.</li>
+            <li>Consistently format queries to utilize caching effectively.</li>
+            <li>Utilize memory tables for fast session storage.</li>
+            <li>Create summary tables for frequent <code>COUNT</code> or <code>SUM</code> operations.</li>
+            <li>Increase buffer sizes if required.</li>
+            <li>Avoid using the <code>HAVING</code> clause, as it can be slow.</li>
+            <li>Use <code>OPTIMIZE TABLE table_name</code> to reorganize indexes and reclaim space.</li>
+            <li>Analyze queries with the <code>EXPLAIN</code> keyword to ensure efficient index usage.</li>
+        </ul>
+
+        <h2>6. Choosing the Right Storage Engine:</h2>
+        <p>MyISAM and InnoDB are the most common storage engines. MyISAM offers table-level locking and is generally faster, but lacks relation features. InnoDB provides row-level locking and supports relations but uses more resources.</p>
+
+        <h2>7. Effective Query Limitation:</h2>
+        <p>Use <code>LIMIT</code> in queries to reduce memory usage and increase speed.</p>
+
+        <h2>Conclusion:</h2>
+        <p>Optimizing MySQL or MariaDB databases goes beyond hardware upgrades and network configurations. Effective query and schema design are crucial for sustaining high performance in large databases. By applying these best practices, you can ensure your database operates efficiently, even as it scales.</p>`
     },
     {
       key: "Coding-Standards",
       url: "https://www.linkedin.com/pulse/basic-coding-standards-tousif-khan/",
       title: "Coding Standards",
       description:
-        "Basic coding standards for quality product, which even some senior developers don't follow."
+        "Basic coding standards for quality product, which even some senior developers don't follow.",
+      data: `<h1>Understanding Code Conventions: PSR-1 Standards</h1>
+        <p>Code conventions are important to programmers for a number of reasons:</p>
+        <ul>
+            <li>40%–80% of the lifetime cost of a piece of software goes to maintenance.</li>
+            <li>Hardly any software is maintained for its whole life by the original author.</li>
+            <li>Code conventions improve the readability of the software, allowing engineers to understand new code more quickly and thoroughly.</li>
+            <li>If you ship your source code as a product, you need to make sure it is as well packaged and clean as any other product you create.</li>
+        </ul>
+        <p>Sadly, a very large number of developers don't follow coding standards. When going through a file built by multiple developers, irregular naming, spacing, and parenthesis usage are often evident, making it difficult to work on.</p>
+
+        <h2>Extended Guidelines from PSR-1 Coding Standards:</h2>
+        <ul>
+            <li>Files must use only <code>&lt;?php</code> tags.</li>
+            <li>Class names MUST be declared in StudlyCaps.</li>
+            <li>Class constants MUST be declared in all upper case with underscore separators.</li>
+            <li>Opening braces for classes and methods MUST go on the next line, and closing braces MUST go on the next line after the body.</li>
+            <li>Method names MUST be declared in camelCase.</li>
+            <li>Code MUST use 4 spaces for indenting, not tabs.</li>
+            <li>There MUST be one blank line after the namespace declaration, and there MUST be one blank line after the block of use declarations.</li>
+            <li>Lines SHOULD NOT be longer than 80 characters; lines longer than that SHOULD be split into multiple subsequent lines.</li>
+            <li>There MUST NOT be trailing whitespace at the end of non-blank lines.</li>
+            <li>Blank lines MAY be added to improve readability and to indicate related blocks of code.</li>
+            <li>There MUST NOT be more than one statement per line.</li>
+            <li>The PHP constants <code>true</code>, <code>false</code>, <code>null</code> MUST be in lower case.</li>
+            <li>In method arguments, there MUST NOT be a space before each comma, and there MUST be one space after each comma.</li>
+        </ul>
+
+        <h3>Example:</h3>
+        <code>
+            &lt;?php<br>
+            namespace Vendor\\Package;<br><br>
+            use FooInterface;<br>
+            use BarClass as Bar;<br>
+            use OtherVendor\\OtherPackage\\BazClass;<br><br>
+            class Foo extends Bar implements FooInterface<br>
+            {<br>
+                public function sampleFunction($a, $b = null)<br>
+                {<br>
+                    if ($a === $b) {<br>
+                        bar();<br>
+                    } elseif ($a &gt; $b) {<br>
+                        $foo-&gt;bar($arg1);<br>
+                    } else {<br>
+                        BazClass::bar($arg2, $arg3);<br>
+                    }<br>
+                }<br>
+            }
+        </code>
+
+        <p>For further details on PSR-1 standards, visit the following URLs:</p>
+        <ul>
+            <li><a href="http://www.php-fig.org/psr/psr-2/">PSR-2 Coding Style Guide</a></li>
+            <li><a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md">PSR-1 Basic Coding Standard</a></li>
+        </ul>`
     },
     {
       key: "Minimize-Website-Loadtime",
@@ -490,7 +635,28 @@ const blogSection = {
       url: "https://www.linkedin.com/pulse/why-we-should-use-memcache-tousif-khan/",
       title: "Memcache",
       description:
-        "Relief your database and shift some load on memcache as it is faster (because data is coming from RAM instead of HDD) and your application will be available for more traffic"
+        "Relief your database and shift some load on memcache as it is faster (because data is coming from RAM instead of HDD) and your application will be available for more traffic",
+      data: `<h1>Maximizing Application Performance with Memcache</h1>
+        <p>An application having many products and options with large number of traffic may need to cache the most-used data. This is essential for delivering the data efficiently while using minimal resources. Typically, web applications request data from the database for each user request, which can slow down the site as visitor numbers increase. Memcache can speed up website performance by up to 95% in some cases.</p>
+
+        <h2>What is Memcache?</h2>
+        <p>Memcache is an in-memory, distributed cache. The primary commands of Memcache are SET(key, value) and GET(key) operations. It can be distributed across multiple servers, maintaining constant-time operations.</p>
+
+        <h2>Performance</h2>
+        <p>Memcache significantly reduces page load time, providing users with a faster and better experience. Without Memcache, each page load requires numerous database queries, which can be time-consuming. Memcache queries are much faster, returning in milliseconds.</p>
+
+        <h2>Scalability</h2>
+        <p>By using Memcache, applications avoid frequent database and disk access, which is crucial for scaling out databases. Without Memcache, apps might hit their database limits too often, creating performance bottlenecks.</p>
+
+        <h2>How Memcache Works</h2>
+        <ul>
+            <li>Memcache first checks if a result hash from a select query is cached. If not, the query executes against the database and the result is then stored in Memcache for future requests.</li>
+            <li>Subsequent identical queries find the result hash in Memcache, delivering it directly from RAM without querying the database again.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>Memcache is ideal for enhancing page load speeds and application scalability. Integrating Memcache from the early stages of development can simplify the process and prepare the application for future scaling needs.</p>
+    </div>`
     },
     {
       key: "Read_More",

@@ -96,3 +96,57 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+}
+
+.blog-post {
+  width: 80%;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.blog-post h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.blog-post p, .blog-post ul {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.blog-post pre {
+  background: #eee;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+.blog-post code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+}
+
+.blog-post a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+.blog-post a:hover {
+  text-decoration: underline;
+}
+
+.blog-post ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
