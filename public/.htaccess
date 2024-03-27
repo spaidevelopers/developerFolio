@@ -1,4 +1,13 @@
 RewriteEngine On
 RewriteBase /
+
+# Redirect non-www to www
 RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Handle requests to non-existent files or directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all other requests to index.html
+RewriteRule ^ index.html [L]
