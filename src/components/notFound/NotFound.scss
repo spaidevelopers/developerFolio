@@ -1,0 +1,49 @@
+.NotFound {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: 'Arial', sans-serif;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    //margin-bottom: 20px;
+  }
+
+  h1 {
+    color: #55198b; // Tomato color for a bit of fun
+    //margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  p {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  button, a {
+    display: inline-block;
+    background-color: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #e55347;
+    }
+  }
+
+  a {
+    margin-left: 10px;
+    background-color: #555;
+    &:hover {
+      background-color: #444;
+    }
+  }
+}

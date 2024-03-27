@@ -6,6 +6,8 @@ import {
 import "./App.scss";
 import Main from "./containers/Main";
 import BlogsParent from "./containers/BlogsParent";
+import NotFound from "./components/notFound/NotFound";
+
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "blogs/:blogKey",
     element: <BlogsParent />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 
