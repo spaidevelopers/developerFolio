@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.15d0664a.css",
-    "main.js": "/static/js/main.8f69a2f7.js",
+    "main.css": "/static/css/main.f64c39b8.css",
+    "main.js": "/static/js/main.47d903f8.js",
     "static/css/64.bba8fa55.chunk.css": "/static/css/64.bba8fa55.chunk.css",
     "static/js/64.56dc6704.chunk.js": "/static/js/64.56dc6704.chunk.js",
     "static/css/769.b3cbb36b.chunk.css": "/static/css/769.b3cbb36b.chunk.css",
@@ -24,15 +24,15 @@
     "static/media/spreedly1.webp": "/static/media/spreedly1.0d3f58c489dba3f82abc.webp",
     "index.html": "/index.html",
     "static/media/talksCardBack.svg": "/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.15d0664a.css.map": "/static/css/main.15d0664a.css.map",
-    "main.8f69a2f7.js.map": "/static/js/main.8f69a2f7.js.map",
+    "main.f64c39b8.css.map": "/static/css/main.f64c39b8.css.map",
+    "main.47d903f8.js.map": "/static/js/main.47d903f8.js.map",
     "64.bba8fa55.chunk.css.map": "/static/css/64.bba8fa55.chunk.css.map",
     "64.56dc6704.chunk.js.map": "/static/js/64.56dc6704.chunk.js.map",
     "769.b3cbb36b.chunk.css.map": "/static/css/769.b3cbb36b.chunk.css.map",
     "769.bda0d7b7.chunk.js.map": "/static/js/769.bda0d7b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.15d0664a.css",
-    "static/js/main.8f69a2f7.js"
+    "static/css/main.f64c39b8.css",
+    "static/js/main.47d903f8.js"
   ]
 }
