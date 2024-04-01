@@ -11,7 +11,7 @@ export default function Credibility() {
   if (credibilityInfo.display) {
     return (
       <div className="credibility-section" id="credibility">
-        <h1 className="credibility-heading">Credibility</h1>
+        <h2 className="credibility-heading">Credibility</h2>
         <div className="credibility-card-container">
 
 

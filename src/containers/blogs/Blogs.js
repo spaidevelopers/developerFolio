@@ -51,7 +51,7 @@ export default function Blogs(pageParams) {
   return (
       <div className="main" style={{ marginTop: 0 }} id="blogs">
         <div className="blog-header">
-          <h1 className="blog-header-text">{blogSection.title}</h1>
+          <h2 className="blog-header-text">{blogSection.title}</h2>
           <p className={ isDark ? "dark-mode blog-subtitle" : "subTitle blog-subtitle" }>
             {blogSection.subtitle}
           </p>

@@ -35,7 +35,7 @@
 }
 
 .greeting-text {
-  font-size: 70px;
+  font-size: 50px;
   line-height: 1.1;
   color: $textColor !important;
 }
@@ -85,7 +85,7 @@
 /* Media Query */
 @media (max-width: 1380px) {
   .greeting-text {
-    font-size: 50px;
+    font-size: 30px;
   }
   .greeting-text-p {
     font-size: 20px;
@@ -96,7 +96,7 @@
     justify-content: space-around;
   }
   .greeting-text {
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
   }
   .greeting-text-p {

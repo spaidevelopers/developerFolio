@@ -22,7 +22,7 @@ const illustration = {
 
 const greeting = {
   username: "Tousif K.",
-  title: "Hi all, I'm Tousif",
+  title: "Ideas to Digital Reality with Tousif",
   subTitle: emoji(
     // "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with PHP / Python / Flutter / React and some other cool libraries and frameworks.",
     //   "From Idea to Reality | Tousif Khan - Your Web & Mobile App Development Partner"
